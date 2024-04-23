@@ -6,25 +6,25 @@
     <title>Головна сторінка</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #CFCFCF; /* Изменен цвет фона */
-            color: #000000;
+            font-family: Georgia, Circe Cambria;
+            background-color: #CFCFCF; /* Цвет фона */
+            color: #000000; /* Цвет текста */
             margin: 0;
             padding: 0;
         }
         header {
             text-align: center;
-            background-color: #ffffff;
+            background-color: #CFCFCF;
             color: #000000;
             padding: 20px;
         }
         nav {
-            background-color: #ffffff;
-            color: #000000;
-            padding: 10px;
+            background-color: #2f4134; /* Цвет фона */
+            color: #000000; /* Цвет текста */
+            padding: 20px;
             width: 100%;
             display: flex;
-            justify-content: flex-end; /* Переместил панель навигации вправо */
+            justify-content: flex-end; /* Перемещение панели навигации вправо */
         }
         nav ul {
             list-style-type: none;
@@ -33,30 +33,34 @@
             display: flex;
         }
         nav ul li {
-            margin-left: 20px; /* Изменил margin-left на margin-right */
+            margin-left: 60px;
+            font-family: serif; /* Замена шрифта */
+            font-size: 23px; /* Увеличение размера шрифта до 23 пикселей */
+            color: #ffffff; /* белый цвет */
         }
         section {
             display: flex;
             justify-content: space-between;
-            padding: 20px;
+            padding: 60px;
         }
         .main-text {
             text-align: center;
             flex: 1;
-            font-family: "veryBerry", sans-serif; /* Заменил шрифт */
+            color: #2f4134; /* Цвет текста */
+            text-indent: -20px; /* Сдвиг текста влево на 5 пикселей */
         }
         .main-text p {
-            font-family: "circe contrast", sans-serif; /* Заменил шрифт */
-        }
-        .main-image {
-            flex: 1;
+            font-family: fantasy; /* Замена шрифта */
+            font-size: 25px; /* Увеличение размера шрифта до 18 пикселей */
+            margin-top: 60px; /* Отступ сверху между двумя абзацами */
         }
         .portfolio-images {
-            width: 45%;
-            height: 45%;
+            width: 40%;
+            height: 40%;
             margin-bottom: 10px;
             flex-wrap: wrap;
             justify-content: space-between;
+            margin-right: -100px; /* Отрицательный отступ вправо */
         }
         .portfolio-images img {
             width: 45%;
@@ -64,15 +68,13 @@
         }
         footer {
             text-align: center;
-            background-color: #ffffff;
-            color: #000000;
+            background-color: #CFCFCF;
+            color: #414843;
             padding: 20px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Я Ваш фотограф</h1>
     </header>
     <nav>
         <ul>
@@ -88,8 +90,8 @@
             <img src="5ef45761b37ce9ec46f18ac897ec7993-removebg-preview.png" alt="Фото фотографа">
         </div>
         <div class="main-text">
-            <p>Я Стефанія, весільний фотограф</p> <!-- Изменен текст -->
-            <p style="font-family: 'circe contrast', sans-serif;">Моя мета – допомогти вам зберегти спогади про ваше весілля у вигляді красивих та емоційних фотографій, які ви будете з радістю переглядати протягом багатьох років. Я вірю, що кожне весілля – це неповторна історія кохання, і я прагну розповісти цю історію через свої фотографії.</p>
+            <p>Я Стефанія, ваш весільний фотограф!</p>
+            <p style="font-family: serif;">Моя мета – допомогти вам зберегти спогади про ваше весілля у вигляді красивих та емоційних фотографій, які ви будете з радістю переглядати протягом багатьох років. Я вірю, що кожне весілля – це неповторна історія кохання, і я прагну розповісти цю історію через свої фотографії.</p>
         </div>
         <div class="portfolio-images">
             <img src="IMG_3602.jpg" alt="Робота 1">
@@ -99,7 +101,7 @@
         </div>
     </section>
     <footer>
-        <p>На кожну другу фотосесію знижка 30%</p>
+        <p>При бронюванні заздалегідь знижка -30%</p>
     </footer>
 </body>
 </html>
