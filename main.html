@@ -2,12 +2,73 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Вас вітає Стефанія весільний фотограф, зафіксую найщасливіші ваші моменти!">
-    <meta name="keywords" content="фотографія, весільний фотограф, портрети, відкритки, весілля">
-    <meta name="author" content="Стефанія">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Головна сторінка</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #CFCFCF; /* Изменен цвет фона */
+            color: #000000;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            background-color: #ffffff;
+            color: #000000;
+            padding: 20px;
+        }
+        nav {
+            background-color: #ffffff;
+            color: #000000;
+            padding: 10px;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end; /* Переместил панель навигации вправо */
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 20px; /* Изменил margin-left на margin-right */
+        }
+        section {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .main-text {
+            text-align: center;
+            flex: 1;
+            font-family: "veryBerry", sans-serif; /* Заменил шрифт */
+        }
+        .main-text p {
+            font-family: "circe contrast", sans-serif; /* Заменил шрифт */
+        }
+        .main-image {
+            flex: 1;
+        }
+        .portfolio-images {
+            width: 45%;
+            height: 45%;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .portfolio-images img {
+            width: 45%;
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            background-color: #ffffff;
+            color: #000000;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -22,22 +83,21 @@
             <li><a href="#contact">Контакти</a></li>
         </ul>
     </nav>
-    <main>
-        <section>
-            <div class="main-image">
-                <img src="5ef45761b37ce9ec46f18ac897ec7993-removebg-preview.png" alt="Фото фотографа">
-            </div>
-            <div class="main-text">
-                <p>Вас вітає Стефанія весільний фотограф, зафіксую найщасливіші ваші моменти!</p>
-            </div>
-            <div class="portfolio-images">
-                <img src="IMG_3602.jpg" alt="Робота 1">
-                <img src="IMG_3601.jpg" alt="Робота 2">
-                <img src="IMG_3599.jpg" alt="Робота 3">
-                <img src="IMG_3600.jpg" alt="Робота 4">
-            </div>
-        </section>
-    </main>
+    <section>
+        <div class="main-image">
+            <img src="5ef45761b37ce9ec46f18ac897ec7993-removebg-preview.png" alt="Фото фотографа">
+        </div>
+        <div class="main-text">
+            <p>Я Стефанія, весільний фотограф</p> <!-- Изменен текст -->
+            <p style="font-family: 'circe contrast', sans-serif;">Моя мета – допомогти вам зберегти спогади про ваше весілля у вигляді красивих та емоційних фотографій, які ви будете з радістю переглядати протягом багатьох років. Я вірю, що кожне весілля – це неповторна історія кохання, і я прагну розповісти цю історію через свої фотографії.</p>
+        </div>
+        <div class="portfolio-images">
+            <img src="IMG_3602.jpg" alt="Робота 1">
+            <img src="IMG_3601.jpg" alt="Робота 2">
+            <img src="IMG_3599.jpg" alt="Робота 3">
+            <img src="IMG_3600.jpg" alt="Робота 4">
+        </div>
+    </section>
     <footer>
         <p>На кожну другу фотосесію знижка 30%</p>
     </footer>
