@@ -20,7 +20,7 @@
         }
         nav {
             font-family: 'Times New Roman', Times, serif; /* Встановлюємо шрифт Times New Roman */
-            background-color: #263622; /* Оливковий цвет фона для меню */
+            background-color: #3d5a35; /* Оливковий цвет фона для меню */
             color: #ffffff; /* Білий колір тексту в меню */
             padding: 10px;
             width: 100%;
@@ -50,7 +50,7 @@
             flex: 1;
         }
         .main-image img {
-            transform: scale(1.6); /* Увеличиваем размер изображения в половину */
+            transform: scale(1.3); /* Увеличиваем размер изображения в половину */
             max-width: 100%; /* Изображение не будет превышать ширину контейнера */
             height: auto; /* Позволяет сохранить пропорции изображения */
         }
@@ -100,30 +100,14 @@
             <img src="5ef45761b37ce9ec46f18ac897ec7993-removebg-preview.png" alt="Фото фотографа">
         </div>
         <div class="main-text">
-            <h2 style="font-family: Arial Black, Arial, sans-serif; white-space: nowrap;">Я Стефанія - ваш весільний фотограф!</h2>
-           
-            <p style="font-family: Georgia, serif; text-align: left; margin-left: -1em;">
-                <br>
-                <br>
-                Моя мета – допомогти вам зберегти<br>
-                <br>
-                спогади про ваше весілля у вигляді<br>
-                <br>
-                красивих та емоційних фотографій  <br>
-                <br>
-                які ви будете з радістю переглядати<br>
-                <br>
-                протягом багатьох років.
-              
-                
+            <h2 style="font-family: Arial Black, Arial, sans-serif;">Я Стефанія - ваш весільний фотограф!</h2>
+            <p>Моя мета – допомогти вам зберегти спогади про ваше весілля у вигляді красивих та емоційних фотографій, які ви будете з радістю переглядати протягом багатьох років.</p>
         </div>
         <div class="portfolio-images">
             <img src="IMG_3600.JPG" alt="Робота 4">
             <img src="IMG_3598.JPG" alt="Робота 3">
             <img src="IMG_3601.JPG" alt="Робота 2">
             <img src="IMG_3602.JPG" alt="Робота 1">
-            
-
         </div>
     </section>
     <footer>
