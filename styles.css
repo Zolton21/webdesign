@@ -4,6 +4,8 @@ body {
     color: #000000;
     padding: 0;
     margin: 0;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 header {
     text-align: center;
@@ -32,28 +34,93 @@ section {
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    flex-direction: column;
+    align-items: center;
 }
-.main-text {
-    text-align: center;
-    flex: 1;
+.main-text, .main-image, .portfolio-container, .pricing-content, .review, .contact, .faq-item {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
-.main-image {
-    flex: 1;
+.portfolio-container {
+    position: relative;
+    width: 60%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.portfolio-images {
-    width: 45%;
-    height: 45%;
-    margin-bottom: 10px;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.portfolio-carousel {
+    display: flex;
+    overflow: hidden;
+    width: 80%;
 }
-.portfolio-images img {
-    width: 45%;            
-    margin-bottom: 10px;
+.portfolio-carousel img {
+    width: 100%;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+}
+button.prev, button.next {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
 }
 footer {
     text-align: center;
     background-color: #ffffff;
     color: #000000;
     padding: 20px;
+}
+.pricing-content {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.price-item {
+    width: 30%;
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: center;
+}
+.review {
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }
