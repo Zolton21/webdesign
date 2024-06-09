@@ -3,105 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Головна сторінка</title>
+    <title>Контактна інформація</title>
     <style>
         body {
-            font-family: Georgia, Circe Cambria;
-            background-color: #CFCFCF; /* Цвет фона */
-            color: #000000; /* Цвет текста */
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
             background-color: #CFCFCF;
-            color: #000000;
-            padding: 20px;
+            color: #2c2c2c;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
         }
         nav {
-            background-color: #2f4134; /* Цвет фона */
-            color: #000000; /* Цвет текста */
-            padding: 20px;
             width: 100%;
+            background-color: #2f4134c5;
             display: flex;
-            justify-content: flex-end; /* Перемещение панели навигации вправо */
+            justify-content: flex-end; 
+            padding: 20px 20px;
+            box-sizing: border-box;
+        
         }
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+            font-weight: bold;
+            
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            background-color: #2f4134c5;
+            width: 100%;
+            padding: 70px;
+            box-sizing: border-box;
             display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        nav ul li {
-            margin-left: 60px;
-            font-family: serif; /* Замена шрифта */
-            font-size: 23px; /* Увеличение размера шрифта до 23 пикселей */
-            color: #ffffff; /* белый цвет */
-        }
-        section {
+        .contact-items {
             display: flex;
-            justify-content: space-between;
-            padding: 60px;
-        }
-        .main-text {
-            text-align: center;
-            flex: 1;
-            color: #2f4134; /* Цвет текста */
-            text-indent: -20px; /* Сдвиг текста влево на 5 пикселей */
-        }
-        .main-text p {
-            font-family: fantasy; /* Замена шрифта */
-            font-size: 25px; /* Увеличение размера шрифта до 18 пикселей */
-            margin-top: 60px; /* Отступ сверху между двумя абзацами */
-        }
-        .portfolio-images {
-            width: 40%;
-            height: 40%;
-            margin-bottom: 10px;
+            justify-content: space-around;
+            width: 100%;
             flex-wrap: wrap;
-            justify-content: space-between;
-            margin-right: -100px; /* Отрицательный отступ вправо */
         }
-        .portfolio-images img {
-            width: 45%;
-            margin-bottom: 10px;
-        }
-        footer {
+        .contact-item {
             text-align: center;
+            margin: 20px;
+            flex: 1;
+            min-width: 200px;
+        }
+        .contact-item a {
+            display: block;
+            margin-top: 10px;
+            font-size: 1.5em;
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .contact-item a::after {
+            content: '→';
+            display: inline-block;
+            margin-left: 10px;
+            color: #ffffff;
+        }
+        h1 {
+            color: #2f4134c5;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        h2, p {
+            color: #ffffff;
+        }
+        .photo-gallery {
+            display: flex;
+            justify-content: center;
             background-color: #CFCFCF;
-            color: #414843;
-            padding: 20px;
+            padding: 0;
+            margin: 40px 0 20px; /* Increase the top margin */
+            width: 100%;
+        }
+        .photo-gallery a {
+            flex: 1;
+            display: block;
+        }
+        .photo-gallery img {
+            width: 100%;
+            height: auto;
+            border: none;
+        }
+        .footer {
+            background-color: #2f4134c5;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+            color: #ffffff;
+            box-sizing: border-box;
         }
     </style>
 </head>
 <body>
-    </header>
     <nav>
-        <ul>
-            <li><a href="#about">Про мене</a></li>
-            <li><a href="#portfolio">Портфоліо</a></li>
-            <li><a href="#pricing">Прайс</a></li>
-            <li><a href="#reviews">Відгуки</a></li>
-            <li><a href="#contact">Контакти</a></li>
-        </ul>
+        <a href="#about">Про мене</a>
+        <a href="#portfolio">Портфоліо</a>
+        <a href="#pricing">Прайс</a>
+        <a href="#reviews">Відгуки</a>
+        <a href="#contact">Контакти</a>
     </nav>
-    <section>
-        <div class="main-image">
-            <img src="5ef45761b37ce9ec46f18ac897ec7993-removebg-preview.png" alt="Фото фотографа">
+    <h1 id="contact">ЗВ'ЯЗАТИСЬ ЗІ МНОЮ</h1>
+    <div class="container">
+        <div class="contact-items">
+            <div class="contact-item">
+                <h2>Телеграм</h2>
+                <p>STEFANIA.PH</p>
+                <a href="https://t.me/valleriiia27" target="_blank"></a>
+            </div>
+            <div class="contact-item">
+                <h2>Номер</h2>
+                <p>+38 050 019 97 03</p>
+                <a href="tel:+380500199703"></a>
+            </div>
+            <div class="contact-item">
+                <h2>Інстаграм</h2>
+                <p>STEFANIA.PHOTOGRAPHER</p>
+                <a href="https://www.instagram.com/valeriya_kasperovich?igsh=NXlhcjFnb25teGlj" target="_blank"></a>
+            </div>
         </div>
-        <div class="main-text">
-            <p>Я Стефанія, ваш весільний фотограф!</p>
-            <p style="font-family: serif;">Моя мета – допомогти вам зберегти спогади про ваше весілля у вигляді красивих та емоційних фотографій, які ви будете з радістю переглядати протягом багатьох років. Я вірю, що кожне весілля – це неповторна історія кохання, і я прагну розповісти цю історію через свої фотографії.</p>
-        </div>
-        <div class="portfolio-images">
-            <img src="IMG_3602.jpg" alt="Робота 1">
-            <img src="IMG_3601.jpg" alt="Робота 2">
-            <img src="IMG_3599.jpg" alt="Робота 3">
-            <img src="IMG_3600.jpg" alt="Робота 4">
-        </div>
-    </section>
-    <footer>
-        <p>При бронюванні заздалегідь знижка -30%</p>
-    </footer>
+    </div>
+    <div class="photo-gallery">
+        <a href="https://www.instagram.com/valeriya_kasperovich?igsh=NXlhcjFnb25teGlj" target="_blank">
+            <img src="photo1.PNG" alt="Фото 1">
+        </a>
+        <a href="https://www.instagram.com/valeriya_kasperovich?igsh=NXlhcjFnb25teGlj" target="_blank">
+            <img src="photo2.PNG" alt="Фото 2">
+        </a>
+        <a href="https://www.instagram.com/valeriya_kasperovich?igsh=NXlhcjFnb25teGlj" target="_blank">
+            <img src="photo3.PNG" alt="Фото 3">
+        </a>
+        <a href="https://www.instagram.com/valeriya_kasperovich?igsh=NXlhcjFnb25teGlj" target="_blank">
+            <img src="photo4.PNG" alt="Фото 4">
+        </a>
+        <a href="https://www.instagram.com/valeriya_kasperovich?igsh=NXlhcjFnb25teGlj" target="_blank">
+            <img src="photo5.PNG" alt="Фото 5">
+        </a>
+        <a href="https://www.instagram.com/valeriya_kasperovich?igsh=NXlhcjFnb25teGlj" target="_blank">
+            <img src="photo6.PNG" alt="Фото 6">
+        </a>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 STEFANIA PHOTOGRAPHER</p>
+    </div>
 </body>
 </html>
