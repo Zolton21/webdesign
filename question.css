@@ -1,0 +1,96 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #cfcfcf; /* Сірий фон */
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    color: #000000;
+    padding: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #cfcfcf; /* Сірий фон */
+}
+
+nav {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #4A544C; /* Оливковий колір фону для меню */
+    color: #ffffff;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #b4ecff; /* Підсвічування блакитним кольором при наведенні */
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 70px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.faq-section {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    width: 60%; /* Ширший прямокутник */
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    background-color: #4A544C;
+    color: #ffffff;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.faq-answer {
+    display: none;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px;
+    border: 1px solid #4A544C;
+    border-radius: 4px;
+    margin-top: 5px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+footer {
+    text-align: center;
+    background-color: #cfcfcf;
+    color: #000000;
+    padding: 20px;
+    width: 100%;
+}
+
