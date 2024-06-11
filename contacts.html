@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контактна інформація</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #CFCFCF;
+            color: #2c2c2c;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+        }
+        nav {
+            width: 100%;
+            background-color: #2f4134c5;
+            display: flex;
+            justify-content: flex-end; 
+            padding: 20px 20px;
+            box-sizing: border-box;
+        
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+            font-weight: bold;
+            
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            background-color: #2f4134c5;
+            width: 100%;
+            padding: 70px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contact-items {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+        .contact-item {
+            text-align: center;
+            margin: 20px;
+            flex: 1;
+            min-width: 200px;
+        }
+        .contact-item a {
+            display: block;
+            margin-top: 10px;
+            font-size: 1.5em;
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .contact-item a::after {
+            content: '→';
+            display: inline-block;
+            margin-left: 10px;
+            color: #ffffff;
+        }
+        h1 {
+            color: #2f4134c5;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        h2, p {
+            color: #ffffff;
+        }
+        .photo-gallery {
+            display: flex;
+            justify-content: center;
+            background-color: #CFCFCF;
+            padding: 0;
+            margin: 40px 0 20px; /* Increase the top margin */
+            width: 100%;
+        }
+        .photo-gallery a {
+            flex: 1;
+            display: block;
+        }
+        .photo-gallery img {
+            width: 100%;
+            height: auto;
+            border: none;
+        }
+        .footer {
+            background-color: #2f4134c5;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+            color: #ffffff;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#about">Про мене</a>
+        <a href="#portfolio">Портфоліо</a>
+        <a href="#pricing">Прайс</a>
+        <a href="#reviews">Відгуки</a>
+        <a href="#contact">Контакти</a>
+    </nav>
+    <h1 id="contact">ЗВ'ЯЗАТИСЬ ЗІ МНОЮ</h1>
+    <div class="container">
+        <div class="contact-items">
+            <div class="contact-item">
+                <h2>Телеграм</h2>
+                <p>STEFANIA.PH</p>
+                <a href="https://t.me/valleriiia27" target="_blank"></a>
+            </div>
+            <div class="contact-item">
+                <h2>Номер</h2>
+                <p>+38 050 019 97 03</p>
+                <a href="tel:+380500199703"></a>
+            </div>
+            <div class="contact-item">
+                <h2>Інстаграм</h2>
+                <p>STEFANIA.PHOTOGRAPHER</p>
+                <a href="https://www.instagram.com/valeriya_kasperovich?igsh=NXlhcjFnb25teGlj" target="_blank"></a>
+            </div>
+        </div>
+    </div>
+    <div class="photo-gallery">
+        <a href="https://www.instagram.com/valeriya_kasperovich?igsh=NXlhcjFnb25teGlj" target="_blank">
+            <img src="photo1.PNG" alt="Фото 1">
+        </a>
+        <a href="https://www.instagram.com/valeriya_kasperovich?igsh=NXlhcjFnb25teGlj" target="_blank">
+            <img src="photo2.PNG" alt="Фото 2">
+        </a>
+        <a href="https://www.instagram.com/valeriya_kasperovich?igsh=NXlhcjFnb25teGlj" target="_blank">
+            <img src="photo3.PNG" alt="Фото 3">
+        </a>
+        <a href="https://www.instagram.com/valeriya_kasperovich?igsh=NXlhcjFnb25teGlj" target="_blank">
+            <img src="photo4.PNG" alt="Фото 4">
+        </a>
+        <a href="https://www.instagram.com/valeriya_kasperovich?igsh=NXlhcjFnb25teGlj" target="_blank">
+            <img src="photo5.PNG" alt="Фото 5">
+        </a>
+        <a href="https://www.instagram.com/valeriya_kasperovich?igsh=NXlhcjFnb25teGlj" target="_blank">
+            <img src="photo6.PNG" alt="Фото 6">
+        </a>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 STEFANIA PHOTOGRAPHER</p>
+    </div>
+</body>
+</html>
