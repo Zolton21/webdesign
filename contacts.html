@@ -4,112 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контактна інформація</title>
-    <style>
-        body {
-            font-family: 'Times New Roman', Times, serif;
-            background-color: #CFCFCF;
-            color: #2c2c2c;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 0;
-        }
-        nav {
-            width: 100%;
-            background-color: #2f4134c5;
-            display: flex;
-            justify-content: flex-end; 
-            padding: 20px 20px;
-            box-sizing: border-box;
-        
-        }
-        nav a {
-            color: #ffffff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.2em;
-            font-weight: bold;
-            
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .container {
-            background-color: #2f4134c5;
-            width: 100%;
-            padding: 70px;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .contact-items {
-            display: flex;
-            justify-content: space-around;
-            width: 100%;
-            flex-wrap: wrap;
-        }
-        .contact-item {
-            text-align: center;
-            margin: 20px;
-            flex: 1;
-            min-width: 200px;
-        }
-        .contact-item a {
-            display: block;
-            margin-top: 10px;
-            font-size: 1.5em;
-            color: #ffffff;
-            text-decoration: none;
-        }
-        .contact-item a::after {
-            content: '→';
-            display: inline-block;
-            margin-left: 10px;
-            color: #ffffff;
-        }
-        h1 {
-            color: #2f4134c5;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        h2, p {
-            color: #ffffff;
-        }
-        .photo-gallery {
-            display: flex;
-            justify-content: center;
-            background-color: #CFCFCF;
-            padding: 0;
-            margin: 40px 0 20px; /* Increase the top margin */
-            width: 100%;
-        }
-        .photo-gallery a {
-            flex: 1;
-            display: block;
-        }
-        .photo-gallery img {
-            width: 100%;
-            height: auto;
-            border: none;
-        }
-        .footer {
-            background-color: #2f4134c5;
-            width: 100%;
-            text-align: center;
-            padding: 10px 0;
-            color: #ffffff;
-            box-sizing: border-box;
-        }
-    </style>
+    <link rel="stylesheet" href="contacts.css">
 </head>
 <body>
     <nav>
-        <a href="#about">Про мене</a>
-        <a href="#portfolio">Портфоліо</a>
-        <a href="#pricing">Прайс</a>
-        <a href="#reviews">Відгуки</a>
-        <a href="#contact">Контакти</a>
+        <ul>        
+            <li><a href="main.html">ГОЛОВНА</a></li>
+            <li><a href="portfolio.html">ПОРТФОЛІО</a></li>
+            <li><a href="#about">ПРО МЕНЕ</a></li>
+            <li><a href="question.html">ПИТАННЯ</a></li>
+            <li><a href="contacts.html">КОНТАКТИ</a></li>
+        </ul>
     </nav>
     <h1 id="contact">ЗВ'ЯЗАТИСЬ ЗІ МНОЮ</h1>
     <div class="container">
