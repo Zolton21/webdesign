@@ -1,10 +1,10 @@
-
-body {
-    font-family: 'Dancing Script', cursive;
-    background-image: linear-gradient(to bottom, #cfcfcff5, #687e62e8); /* Градієнт фону */
-    color: #000000;
+/*body {
+    font-family: 'Times New Roman', Times, serif;
+    background-image: linear-gradient(to bottom, #cfcfcff5, #687e62e8);
+    color: #1c2820c5;
     margin: 0;
     padding: 0;
+    font-size: 18px;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -12,15 +12,15 @@ body {
 
 header {
     text-align: center;
-    color: #000000;
+    color: #1c2820c5;
     padding: 20px;
-    font-family: "Sofia", sans-serif; /* Додано шрифт Sofia */
-    background-image: linear-gradient(to bottom, #cfcfcff5, #4A544C); /* Градієнт від кольору меню до сірого */
+    font-family: "Sofia", sans-serif;
+    background-image: linear-gradient(to bottom, #cfcfcff5, #4A544C);
 }
 
 nav {
     font-family: 'Times New Roman', Times, serif;
-    background-color: #4A544C; /* Оливковий колір фону для меню */
+    background-color: #4A544C;
     color: #ffffff;
     padding: 20px;
     width: 100%;
@@ -47,7 +47,7 @@ nav ul li a {
 
 nav ul li a:hover {
     text-decoration: underline;
-    color: #b4ecff; /* Підсвічування блакитним кольором при наведенні */
+    color: #b4ecff;
 }
 
 .full-width-image {
@@ -57,7 +57,7 @@ nav ul li a:hover {
     background-repeat: no-repeat;
     width: 100%;
     height: auto;
-    aspect-ratio: 5500 / 1000; /* Зберігаємо пропорції зображення */
+    aspect-ratio: 5500 / 1000;
 }
 
 .gallery {
@@ -85,7 +85,7 @@ nav ul li a:hover {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
-    cursor: pointer; /* Зміна курсору для зображень */
+    cursor: pointer;
 }
 
 .photo-grid img:hover {
@@ -93,18 +93,16 @@ nav ul li a:hover {
 }
 
 footer {
-    font-family: 'Times New Roman', Times, serif;
-    text-align: center;
-    background-color: #cfcfcff5;
-    color: #000000;
-    padding: 20px;
+    background-color: #2f4134c5;
     width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    color: #ffffff;
+    box-sizing: border-box;
 }
 
-/* Стилі для модального вікна */
-
 .modal {
-    display: none; /* Приховуємо модальне вікно за замовчуванням */
+    display: none;
     position: fixed;
     z-index: 1;
     padding-top: 100px;
@@ -118,9 +116,9 @@ footer {
 }
 
 .modal-content {
-    margin: auto; /* Задаємо автоматичні відступи по горизонталі, щоб зображення було по центру */
+    margin: auto;
     display: block;
-    max-width: 100%; /* Ширина контенту в модальному вікні не більше ширини екрану */
+    max-width: 100%;
 }
 
 
@@ -173,8 +171,180 @@ footer {
 .prev:hover,
 .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
+}*/
+/* Global styles */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-image: linear-gradient(to bottom, #cfcfcff5, #687e62e8); /* Gradient background */
+    color: #1c2820c5; /* Dark green text color */
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
+header {
+    text-align: center;
+    color: #1c2820c5;
+    padding: 20px;
+    font-family: "Sofia", sans-serif; /* Custom font */
+    background-image: linear-gradient(to bottom, #cfcfcff5, #4A544C); /* Gradient background */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease; /* Smooth transition */
+}
 
+nav {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #4A544C; /* Olive background color */
+    color: #ffffff; /* White text color */
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
 
+nav ul li {
+    margin-right: 70px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #b4ecff; /* Light blue color on hover */
+}
+
+.full-width-image {
+    background-image: url('images/27.jpg'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 5500 / 1000; /* Preserve aspect ratio */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease; /* Smooth transition */
+}
+
+.gallery {
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease; /* Smooth transition */
+}
+
+.gallery h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.photo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.photo-grid img {
+    width: calc(25% - 10px);
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.photo-grid img:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #2f4134c5; /* Dark green footer background */
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    color: #ffffff; /* White text color */
+    box-sizing: border-box;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease; /* Smooth transition */
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black background */
+}
+
+.modal-content {
+    margin: auto; /* Centered horizontally */
+    display: block;
+    width: 100%; /* Full width */
+    max-width: 560px; /* Maximum width */
+}
+
+.close {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    color: #fff; /* White close button color */
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: #fff; /* White arrow color */
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+}

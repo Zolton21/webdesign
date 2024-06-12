@@ -4,298 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Відгуки</title>
-    <style>
-        body {
-            font-family: 'Times New Roman', Times, serif;
-            background-color: #CFCFCF;
-            color: #2c2c2c;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 0;
-        }
-        nav {
-            width: 100%;
-            background-color: #2f4134c5;
-            display: flex;
-            justify-content: flex-end; 
-            padding: 20px 20px;
-            box-sizing: border-box;
-        }
-        nav a {
-            color: #ffffff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.2em;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .container {
-            width: 100%;
-            padding: 70px;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        h1 {
-            color: #2f4134c5;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        .reviews {
-            width: 100%;
-            padding: 20px;
-            box-sizing: border-box;
-            margin-bottom: 20px;
-        }
-        .review-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .review-item img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin-right: 20px;
-        }
-        .review-item h3 {
-            margin: 0 0 10px;
-            color: #2c2c2c;
-        }
-        .review-item p {
-            margin: 0;
-            color: #2c2c2c;
-        }
-        .write-review-button {
-            background-color: #2f4134c5;
-            color: #ffffff;
-            border: none;
-            padding: 10px 20px;
-            font-size: 1em;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-bottom: 20px;
-            text-decoration: none;
-        }
-        .write-review-button:hover {
-            background-color: #2f4134;
-        }
-        .review-form {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 90%;
-            max-width: 900px;
-            background-color: #ffffff;
-            padding: 40px;
-            box-sizing: border-box;
-            border-radius: 10px;
-            display: none;
-            flex-direction: column;
-            align-items: center;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        #review-form:target {
-            display: flex;
-        }
-        .review-form h2 {
-            margin-bottom: 20px;
-            color: #2c2c2c;
-        }
-        .review-form input, .review-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #cccccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-            font-size: 1em;
-        }
-        .review-form input[type="file"] {
-            display: none;
-        }
-        .review-form label {
-            font-size: 0.9em;
-            margin-bottom: 10px;
-            color: #2c2c2c;
-        }
-        .review-form .photo-section {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            width: 100%;
-        }
-        .review-form .photo-section label {
-            cursor: pointer;
-            display: inline-block;
-            text-decoration: underline;
-            align-self: flex-end;
-        }
-        .review-form .photo-section .photo-preview {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            background-color: #f0f0f0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            cursor: pointer;
-            position: relative;
-            margin-bottom: 10px;
-        }
-        .review-form .photo-section .photo-preview img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .review-form .photo-section .photo-preview::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 24px;
-            height: 24px;
-            background: url('camera-icon.svg') no-repeat center center;
-            background-size: contain;
-            opacity: 0.5;
-        }
-        .review-form .button-section {
-            display: flex;
-            justify-content: flex-end;
-            width: 100%;
-        }
-        .review-form button {
-            background-color: #2f4134c5;
-            color: #ffffff;
-            border: none;
-            padding: 10px 20px;
-            font-size: 1em;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-        .review-form button:hover {
-            background-color: #2f4134;
-        }
-        .close-button {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: none;
-            border: none;
-            font-size: 1.5em;
-            cursor: pointer;
-        }
-        .close-button:hover {
-            color: #2c2c2c;
-        }
-        .footer {
-            background-color: #2f4134c5;
-            width: 100%;
-            text-align: center;
-            padding: 10px 0;
-            color: #ffffff;
-            box-sizing: border-box;
-        }
-        .consent {
-            display: flex;
-            align-items: center;
-            font-size: 0.9em;
-            color: #2c2c2c;
-            margin-bottom: 10px;
-            position: absolute;
-            bottom: 10px;
-            left: 10px;
-        }
-        .consent input {
-            margin-right: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="reviews.css">
 </head>
 <body>
     <nav>
-        <a href="#about">Про мене</a>
-        <a href="#portfolio">Портфоліо</a>
-        <a href="#pricing">Прайс</a>
-        <a href="#reviews">Відгуки</a>
-        <a href="#contact">Контакти</a>
+        <ul>        
+            <li><a href="main.html">ГОЛОВНА</a></li>
+            <li><a href="portfolio.html">ПОРТФОЛІО</a></li>
+            <li><a href="#about">ПРО МЕНЕ</a></li>
+            <li><a href="contacts.html">КОНТАКТИ</a></li>
+            <li><a href="reviews.html">ВІДГУКИ</a></li>
+            <li><a href="question.html">ПИТАННЯ</a></li>
+        </ul>
     </nav>
     <h1 id="reviews">ВІДГУКИ</h1>
     <div class="container">
         <a href="#review-form" class="write-review-button">ЗАЛИШИТИ ВІДГУК</a>
         <div class="reviews">
             <div class="review-item">
-                <img src="1.jpg" alt="Марина Нелюба">
+                <img src="images/reviews/1.jpg" alt="Марина Нелюба">
                 <div>
                     <h3>Марина Нелюба</h3>
                     <p>Все дуже сподобалося. Буду звертатись і надалі. Результат перевершив всі очікування. Фотографії дуже якісні, а сам процес зйомки був надзвичайно приємним. Дуже дякую за професіоналізм та теплоту!</p>
                 </div>
             </div>
             <div class="review-item">
-                <img src="2.jpg" alt="Сергій">
+                <img src="images/reviews/2.jpg" alt="Сергій">
                 <div>
                     <h3>Сергій</h3>
                     <p>Дуже дякуємо за фотосесію та прекрасні світлини. Фотограф має чудове око на деталі і вміння зловити найкращі моменти. Весь процес пройшов дуже легко і невимушено. Дуже задоволені!</p>
                 </div>
             </div>
             <div class="review-item">
-                <img src="3.jpg" alt="Ірина">
+                <img src="images/reviews/3.jpg" alt="Ірина">
                 <div>
                     <h3>Ірина</h3>
                     <p>Чудова робота! Дуже задоволена результатом. Фотографії передають всі емоції та моменти нашого свята. Дуже професійний підхід і приємна атмосфера на зйомці. Рекомендую всім!</p>
                 </div>
             </div>
             <div class="review-item">
-                <img src="4.jpg" alt="Олександр">
+                <img src="images/reviews/4.jpg" alt="Олександр">
                 <div>
                     <h3>Олександр</h3>
                     <p>Професійний фотограф, дуже приємна людина. Все пройшло на найвищому рівні. Дуже вдячний за чудові фото. Рекомендую!</p>
                 </div>
             </div>
             <div class="review-item">
-                <img src="5.jpg" alt="Анастасія">
+                <img src="images/reviews/5.jpg" alt="Анастасія">
                 <div>
                     <h3>Анастасія</h3>
                     <p>Прекрасні фотографії та чудова робота! Дуже задоволені результатом. Фотограф професійний та уважний до деталей. Фотографії перевершили всі наші очікування. Рекомендую всім!</p>
                 </div>
             </div>
             <div class="review-item">
-                <img src="6.jpg" alt="Дмитро">
+                <img src="images/reviews/6.jpg" alt="Дмитро">
                 <div>
                     <h3>Дмитро</h3>
                     <p>Дуже професійно, рекомендую! Фотографії чудові, а сам процес зйомки був дуже приємним та легким. Дуже вдячний за роботу та прекрасний результат. Обов'язково звернемось ще раз!</p>
                 </div>
             </div>
             <div class="review-item">
-                <img src="7.jpg" alt="Катерина">
+                <img src="images/reviews/7.jpg" alt="Катерина">
                 <div>
                     <h3>Катерина</h3>
                     <p>Фотографії перевершили всі очікування! Дуже вдячні за чудову роботу. Фотограф професійний та креативний, знімає з душею. Дуже приємний процес зйомки і відмінний результат. Рекомендуємо!</p>
                 </div>
             </div>
             <div class="review-item">
-                <img src="8.jpg" alt="Андрій">
+                <img src="images/reviews/8.jpg" alt="Андрій">
                 <div>
                     <h3>Андрій</h3>
                     <p>Дуже гарна робота, дякую! Фотографії вийшли чудові, а сам процес зйомки був дуже приємним. Дуже професійний підхід і відмінний результат. Обов'язково звернемось ще раз!</p>
                 </div>
             </div>
             <div class="review-item">
-                <img src="9.jpg" alt="Ольга">
+                <img src="images/reviews/9.jpg" alt="Ольга">
                 <div>
                     <h3>Ольга</h3>
                     <p>Відмінний фотограф, дуже задоволені! Фотографії чудові, а сам процес зйомки був дуже приємним та легким. Дуже вдячні за роботу та прекрасний результат. Обов'язково звернемось ще раз!</p>
                 </div>
             </div>
             <div class="review-item">
-                <img src="10.jpg" alt="Михайло">
+                <img src="images/reviews/10.jpg" alt="Михайло">
                 <div>
                     <h3>Михайло</h3>
                     <p>Супер! Дякую за якісні фото. Фотографії чудові, а сам процес зйомки був дуже приємним та легким. Дуже вдячний за роботу та прекрасний результат. Обов'язково звернемось ще раз!</p>
@@ -326,97 +116,9 @@
             </div>
         </form>
     </div>
-    <div class="footer">
-        <p>© 2024 STEFANIA PHOTOGRAPHER</p>
-    </div>
-    <script>
-        function submitReview(event) {
-            event.preventDefault();
-            const form = event.target;
-            const name = form.name.value;
-            const social = form.social.value;
-            const review = form.review.value;
-            const photoInput = form.photo;
-            const reader = new FileReader();
-
-            reader.onload = function(e) {
-                const reviewsContainer = document.querySelector('.reviews');
-                const reviewItem = document.createElement('div');
-                reviewItem.className = 'review-item';
-                
-                const img = document.createElement('img');
-                img.src = e.target.result;
-                img.alt = name;
-
-                const reviewContent = document.createElement('div');
-                const reviewName = document.createElement('h3');
-                reviewName.textContent = name;
-                const reviewText = document.createElement('p');
-                reviewText.textContent = review;
-
-                reviewContent.appendChild(reviewName);
-                reviewContent.appendChild(reviewText);
-
-                reviewItem.appendChild(img);
-                reviewItem.appendChild(reviewContent);
-
-                reviewsContainer.insertBefore(reviewItem, reviewsContainer.firstChild);
-                
-                form.reset();
-                document.getElementById('photo-preview-img').style.display = 'none';
-                window.location.hash = ''; // Закрываем форму
-            }
-
-            if (photoInput.files && photoInput.files[0]) {
-                reader.readAsDataURL(photoInput.files[0]);
-            } else {
-                const reviewsContainer = document.querySelector('.reviews');
-                const reviewItem = document.createElement('div');
-                reviewItem.className = 'review-item';
-                
-                const img = document.createElement('img');
-                img.src = 'default-avatar.png'; // Используйте изображение по умолчанию
-                img.alt = name;
-
-                const reviewContent = document.createElement('div');
-                const reviewName = document.createElement('h3');
-                reviewName.textContent = name;
-                const reviewText = document.createElement('p');
-                reviewText.textContent = review;
-
-                reviewContent.appendChild(reviewName);
-                reviewContent.appendChild(reviewText);
-
-                reviewItem.appendChild(img);
-                reviewItem.appendChild(reviewContent);
-
-                reviewsContainer.insertBefore(reviewItem, reviewsContainer.firstChild);
-                
-                form.reset();
-                document.getElementById('photo-preview-img').style.display = 'none';
-                window.location.hash = ''; // Закрываем форму
-            }
-        }
-
-        function previewPhoto(event) {
-            const photoPreview = document.getElementById('photo-preview');
-            const photoPreviewImg = document.getElementById('photo-preview-img');
-            const file = event.target.files[0];
-            const reader = new FileReader();
-
-            reader.onload = function(e) {
-                photoPreviewImg.src = e.target.result;
-                photoPreviewImg.style.display = 'block';
-            }
-
-            if (file) {
-                reader.readAsDataURL(file);
-            }
-        }
-    </script>
+    <footer>
+        <p>&copy; 2024 STEFANIA PHOTOGRAPHER</p>
+    </footer>
+    <script src="reviews.js"></script>
 </body>
 </html>
-
-
-
-

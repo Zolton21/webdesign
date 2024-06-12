@@ -1,35 +1,55 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    color: #000000;
-    padding: 0;
+    font-family: 'Times New Roman', Times, serif, cursive;
+    background-image: linear-gradient(to bottom, #cfcfcff5, #687e62e8); /* Градієнт фону */
+    color: #0e1410c5;
     margin: 0;
-    max-width: 100%;
-    overflow-x: hidden;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    min-height: 100vh;
 }
+
 header {
     text-align: center;
-    background-color: #ffffff;
-    color: #000000;
+    color: #0e1410c5;
     padding: 20px;
+    font-family: 'Times New Roman', Times, serif; /* Додано шрифт Sofia */
+    background-image: linear-gradient(to bottom, #cfcfcff5, #4A544C); /* Градієнт від кольору меню до сірого */
 }
+
 nav {
-    background-color: #ffffff;
-    color: #000000;
-    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #4A544C; /* Оливковий колір фону для меню */
+    color: #ffffff;
+    padding: 20px;
     width: 100%;
     display: flex;
     justify-content: center;
 }
+
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
 }
+
 nav ul li {
-    margin-right: 20px;
+    margin-right: 70px;
 }
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #b4ecff; /* Підсвічування блакитним кольором при наведенні */
+}
+
 section {
     display: flex;
     justify-content: space-between;
@@ -37,53 +57,48 @@ section {
     flex-direction: column;
     align-items: center;
 }
-.main-text, .main-image, .portfolio-container, .pricing-content, .review, .contact, .faq-item {
+
+.main-text, .main-image, .photo-grid, .pricing-content, .review, .contact, .faq-item {
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
-.portfolio-container {
-    position: relative;
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
     width: 60%;
     margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
-.portfolio-carousel {
-    display: flex;
-    overflow: hidden;
-    width: 80%;
-}
-.portfolio-carousel img {
+
+.photo-grid img {
     width: 100%;
-    flex-shrink: 0;
     cursor: pointer;
     transition: transform 0.5s ease-in-out;
 }
-button.prev, button.next {
-    background-color: #000;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
+
 footer {
+    background-color: #2f4134c5;
+    width: 100%;
     text-align: center;
-    background-color: #ffffff;
-    color: #000000;
-    padding: 20px;
+    padding: 10px 0;
+    color: #ffffff;
+    box-sizing: border-box;
 }
+
 .pricing-content {
     display: flex;
     justify-content: space-around;
     width: 100%;
 }
+
 .price-item {
     width: 30%;
     background-color: #f2f2f2;
     padding: 10px;
     text-align: center;
 }
+
 .review {
     width: 80%;
     margin: 10px auto;
@@ -91,6 +106,7 @@ footer {
     background-color: #f2f2f2;
     text-align: center;
 }
+
 .modal {
     display: none;
     position: fixed;
@@ -103,12 +119,14 @@ footer {
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.9);
 }
+
 .modal-content {
     margin: auto;
     display: block;
     width: 80%;
     max-width: 700px;
 }
+
 .close {
     position: absolute;
     top: 15px;
@@ -118,9 +136,16 @@ footer {
     font-weight: bold;
     transition: 0.3s;
 }
+
 .close:hover,
 .close:focus {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
+}
+#intro {
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%; /* Adjust the width as per your preference */
+    max-width: 800px; /* Set a maximum width if needed */
 }

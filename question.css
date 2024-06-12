@@ -1,17 +1,18 @@
 body {
     font-family: 'Times New Roman', Times, serif;
     background-color: #cfcfcf; /* Сірий фон */
-    color: #000000;
+    color: #1c2820c5;
     margin: 0;
     padding: 0;
     display: flex;
+    font-size: 18px;
     flex-direction: column;
     min-height: 100vh;
 }
 
 header {
     text-align: center;
-    color: #000000;
+    color: #1c2820c5;
     padding: 20px;
     font-family: 'Times New Roman', Times, serif;
     background-color: #cfcfcf; /* Сірий фон */
@@ -87,10 +88,10 @@ nav ul li a:hover {
 }
 
 footer {
-    text-align: center;
-    background-color: #cfcfcf;
-    color: #000000;
-    padding: 20px;
+    background-color: #2f4134c5;
     width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    color: #ffffff;
+    box-sizing: border-box;
 }
-

@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     const modal = document.getElementById('modal');
     const modalImg = document.getElementById('modal-image');
-    const closeBtn = document.getElementsByClassName('close')[0];
-    const nextBtn = document.getElementsByClassName('next')[0];
-    const prevBtn = document.getElementsByClassName('prev')[0];
+    const closeBtn = document.querySelector('.close');
+    const nextBtn = document.querySelector('.next');
+    const prevBtn = document.querySelector('.prev');
     let currentImgIndex = 0;
     const images = document.querySelectorAll('.photo-grid img');
     const totalImages = images.length;
@@ -43,4 +43,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
             closeModal();
         }
     });
+
+    // Function to animate content after delay
+    const animateContent = () => {
+        const contentElements = document.querySelectorAll('header, .full-width-image, .gallery, footer');
+        contentElements.forEach((element) => {
+            element.style.opacity = 1;
+        });
+    };
+
+    // Call animateContent after a short delay (adjust timing as needed)
+    setTimeout(animateContent, 500); // Example delay of 500ms
 });

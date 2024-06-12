@@ -10,91 +10,48 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Я Ваш фотограф</h1>
-        <nav>
-            <ul>
-                <li><a href="#main">Головна</a></li>
-                <li><a href="#portfolio">Портфоліо</a></li>
-                <li><a href="#pricing">Прайс</a></li>
-                <li><a href="#reviews">Відгуки</a></li>
-                <li><a href="#contact">Контакти</a></li>
-                <li><a href="#faq">FAQ</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav>
+        <ul>
+            <li><a href="main.html">ГОЛОВНА</a></li>
+            <li><a href="portfolio.html">ПОРТФОЛІО</a></li>
+            <li><a href="#about">ПРО МЕНЕ</a></li>
+            <li><a href="contacts.html">КОНТАКТИ</a></li>
+            <li><a href="reviews.html">ВІДГУКИ</a></li>
+            <li><a href="question.html">ПИТАННЯ</a></li>
+        </ul>
+    </nav>
     <main>
         <section id="main">
             <div class="main-image">
-                <img src="5ef45761b37ce9ec46f18ac897ec7993-removebg-preview.png" alt="Фото фотографа">
+                <img src="images/1main.png" alt="Фото фотографа">
             </div>
             <div class="main-text">
                 <p>Вас вітає Стефанія весільний фотограф, зафіксую найщасливіші ваші моменти!</p>
             </div>
         </section>
+        <section id="intro">
+            <h2>Про Стефанію</h2>
+            <p>Привіт! Я Стефанія, професійний весільний фотограф з багаторічним досвідом роботи у сфері фотографії. Моя мета – зафіксувати ваші найщасливіші моменти та зберегти їх на все життя. Я вірю, що кожне весілля унікальне, тому прагну передати вашу індивідуальність та атмосферу свята у своїх знімках. Мої роботи вирізняються творчим підходом, увагою до деталей та щирими емоціями, які відображені на кожній фотографії. Запрошую вас переглянути моє портфоліо та переконатися у цьому самостійно!</p>
+        </section>
         <section id="portfolio">
             <h2>Портфоліо</h2>
-            <div class="portfolio-container">
-                <button class="prev">&lt;</button>
-                <div class="portfolio-carousel">
-                    <img src="IMG_3602.jpg" alt="Робота 1">
-                    <img src="IMG_3601.jpg" alt="Робота 2">
-                    <img src="IMG_3599.jpg" alt="Робота 3">
-                    <img src="IMG_3600.jpg" alt="Робота 4">
-                </div>
-                <button class="next">&gt;</button>
-            </div>
-        </section>
-        <section id="pricing">
-            <h2>Прайс</h2>
-            <div class="pricing-content">
-                <div class="price-item">
-                    <h3>Пакет 1</h3>
-                    <p>Опис пакету 1. Ціна: $100</p>
-                </div>
-                <div class="price-item">
-                    <h3>Пакет 2</h3>
-                    <p>Опис пакету 2. Ціна: $200</p>
-                </div>
-                <div class="price-item">
-                    <h3>Пакет 3</h3>
-                    <p>Опис пакету 3. Ціна: $300</p>
-                </div>
-            </div>
-        </section>
-        <section id="reviews">
-            <h2>Відгуки</h2>
-            <div class="review">
-                <p>"Найкращий фотограф! Дуже рекомендую!" - Ольга</p>
-            </div>
-            <div class="review">
-                <p>"Чудові фото і приємний сервіс!" - Іван</p>
-            </div>
-        </section>
-        <section id="contact">
-            <h2>Контакти</h2>
-            <p>Зв'яжіться зі мною за email: stephanie@example.com</p>
-        </section>
-        <section id="faq">
-            <h2>FAQ</h2>
-            <div class="faq-item">
-                <h3>Як замовити фотосесію?</h3>
-                <p>Ви можете зв'язатися зі мною через email або телефон.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Які пакети послуг ви пропонуєте?</h3>
-                <p>Я пропоную кілька пакетів послуг, деталі ви можете знайти у розділі "Прайс".</p>
+            <div class="photo-grid">
+                <img src="images/IMG_3602.jpg" alt="Робота 1">
+                <img src="images/IMG_3601.jpg" alt="Робота 2">
+                <img src="images/IMG_3598.jpg" alt="Робота 3">
+                <img src="images/IMG_3600.jpg" alt="Робота 4">
             </div>
         </section>
     </main>
-    <footer>
-        <p>На кожну другу фотосесію знижка 30%</p>
-    </footer>
 
     <div id="modal" class="modal">
         <span class="close">&times;</span>
         <img class="modal-content" id="modal-img">
     </div>
+
+    <footer>
+        <p>&copy; 2024 STEFANIA PHOTOGRAPHER</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>

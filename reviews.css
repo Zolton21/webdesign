@@ -1,0 +1,228 @@
+
+body {
+    font-family: 'Times New Roman', Times, serif, cursive;
+    background-image: linear-gradient(to bottom, #cfcfcff5, #687e62e8); /* Градієнт фону */
+    color: #1c2820c5;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+nav {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #4A544C; /* Оливковий колір фону для меню */
+    color: #ffffff;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 70px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #b4ecff; /* Підсвічування блакитним кольором при наведенні */
+}
+.container {
+    width: 100%;
+    padding: 70px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1 {
+    color: #1c2820c5;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.reviews {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+.review-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.review-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.review-item h3 {
+    margin: 0 0 10px;
+    color: #2c2c2c;
+}
+.review-item p {
+    margin: 0;
+    color: #2c2c2c;
+}
+.write-review-button {
+    background-color: #2f4134c5;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+.write-review-button:hover {
+    background-color: #2f4134;
+}
+.review-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 900px;
+    background-color: #ffffff;
+    padding: 40px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+#review-form:target {
+    display: flex;
+}
+.review-form h2 {
+    margin-bottom: 20px;
+    color: #2c2c2c;
+}
+.review-form input, .review-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+.review-form input[type="file"] {
+    display: none;
+}
+.review-form label {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    color: #2c2c2c;
+}
+.review-form .photo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+}
+.review-form .photo-section label {
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: underline;
+    align-self: flex-end;
+}
+.review-form .photo-section .photo-preview {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 10px;
+}
+.review-form .photo-section .photo-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.review-form .photo-section .photo-preview::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    background: url('camera-icon.svg') no-repeat center center;
+    background-size: contain;
+    opacity: 0.5;
+}
+.review-form .button-section {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+.review-form button {
+    background-color: #2f4134c5;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.review-form button:hover {
+    background-color: #2f4134;
+}
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+.close-button:hover {
+    color: #2c2c2c;
+}
+.consent {
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+    color: #2c2c2c;
+    margin-bottom: 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+.consent input {
+    margin-right: 10px;
+}
+footer {
+    background-color: #2f4134c5;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    color: #ffffff;
+    box-sizing: border-box;
+}
