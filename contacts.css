@@ -116,3 +116,13 @@ footer {
     color: #ffffff;
     box-sizing: border-box;
 }
+.container, .photo-gallery, footer {
+    opacity: 0; /* Спочатку приховуємо контент */
+    transform: translateY(20px); /* Піднімаємо контент на 20px */
+    transition: opacity 0.8s ease, transform 0.8s ease; /* Плавна анімація */
+}
+
+.container.show, .photo-gallery.show, footer.show {
+    opacity: 1;
+    transform: translateY(0);
+}

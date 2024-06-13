@@ -1,7 +1,6 @@
 body {
     font-family: 'Times New Roman', Times, serif, cursive;
     background-color: #cfcfcf;
-    /*background-image: linear-gradient(to bottom, #cfcfcff5, #687e62e8); /* Градієнт фону */
     color: #1c2820c5;
     margin: 0;
     padding: 0;
@@ -12,17 +11,12 @@ body {
 }
 
 header {
-    text-align: center;
-    color: #1c2820c5;
-    padding: 20px;
-    font-family: 'Times New Roman', Times, serif; /* Додано шрифт Sofia */
-    background-color: #cfcfcf;
-    /*background-image: linear-gradient(to bottom, #cfcfcff5, #4A544C); /* Градієнт від кольору меню до сірого */
+    display: none; /* Сховати header, бо h2 перенесено */
 }
 
 nav {
     font-family: 'Times New Roman', Times, serif;
-    background-color: #4A544C; /* Оливковий колір фону для меню */
+    background-color: #4A544C;
     color: #ffffff;
     padding: 20px;
     width: 100%;
@@ -49,48 +43,42 @@ nav ul li a {
 
 nav ul li a:hover {
     text-decoration: underline;
-    color: #b4ecff; /* Підсвічування блакитним кольором при наведенні */
+    color: #b4ecff;
 }
+
 .container {
-    background-color: #cfcfcf;
-    width: 100%;
-    padding: 70px;
+    background-color: #8A8F8A; /* Новий фон між #4A544C та #cfcfcf */
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 20px;
     box-sizing: border-box;
+    border: 2px solid #4A544C;
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: calc(100vh - 140px); /* Від nav до footer */
 }
-.contact-items {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    flex-wrap: wrap;
-}
-.contact-item {
+
+.container h2 {
+    color: #ffffff;
+    background-color: #4A544C;
+    font-size: 3em; /* Збільшений розмір тексту */
+    padding: 10px 20px;
+    border: none;
     text-align: center;
-    margin: 20px;
-    flex: 1;
-    min-width: 200px;
+    width: 100%;
+    margin: -60px 0 20px; /* Adjust to overlap container */
+    box-sizing: border-box;
 }
-.contact-item a {
-    display: block;
-    margin-top: 10px;
-    font-size: 1.5em;
-    color: #ffffff;
-    text-decoration: none;
-}
-.contact-item a::after {
-    content: '→';
-    display: inline-block;
-    margin-left: 10px;
-    color: #ffffff;
-}
+
 h1 {
     color: #1c2820c5;
     margin-bottom: 20px;
     text-align: center;
 }
-h2, p {
+
+p {
     color: #ffffff;
 }
 
@@ -99,20 +87,19 @@ h2, p {
     flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
-    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
     box-sizing: border-box;
 }
 
 .pricing-item {
-    background-color: #2f4134c5;
+    background-color: #4A544C;
     color: #ffffff;
     margin: 20px;
     padding: 20px;
-    border-radius: 10px;
+    border: 2px solid #8A8F8A;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    flex: 1 1 calc(33% - 40px); /* Розміщення трьох блоків в ряд з відступами */
+    flex: 1 1 calc(33% - 40px);
     min-width: 250px;
     box-sizing: border-box;
     text-align: center;
@@ -121,7 +108,7 @@ h2, p {
 .pricing-item h3 {
     margin-top: 0;
     font-size: 1.5em;
-    color: #b4ecff;
+    color: #ffffff;
 }
 
 .pricing-item ul {
@@ -136,6 +123,7 @@ h2, p {
 .pricing-item p {
     margin: 10px 0;
 }
+
 footer {
     background-color: #2f4134c5;
     width: 100%;
