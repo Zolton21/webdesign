@@ -1,0 +1,146 @@
+body {
+    font-family: 'Times New Roman', Times, serif, cursive;
+    background-color: #cfcfcf;
+    /*background-image: linear-gradient(to bottom, #cfcfcff5, #687e62e8); /* Градієнт фону */
+    color: #1c2820c5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    color: #1c2820c5;
+    padding: 20px;
+    font-family: 'Times New Roman', Times, serif; /* Додано шрифт Sofia */
+    background-color: #cfcfcf;
+    /*background-image: linear-gradient(to bottom, #cfcfcff5, #4A544C); /* Градієнт від кольору меню до сірого */
+}
+
+nav {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #4A544C; /* Оливковий колір фону для меню */
+    color: #ffffff;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 70px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #b4ecff; /* Підсвічування блакитним кольором при наведенні */
+}
+.container {
+    background-color: #cfcfcf;
+    width: 100%;
+    padding: 70px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact-items {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.contact-item {
+    text-align: center;
+    margin: 20px;
+    flex: 1;
+    min-width: 200px;
+}
+.contact-item a {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: #ffffff;
+    text-decoration: none;
+}
+.contact-item a::after {
+    content: '→';
+    display: inline-block;
+    margin-left: 10px;
+    color: #ffffff;
+}
+h1 {
+    color: #1c2820c5;
+    margin-bottom: 20px;
+    text-align: center;
+}
+h2, p {
+    color: #ffffff;
+}
+
+.pricing-table {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.pricing-item {
+    background-color: #2f4134c5;
+    color: #ffffff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33% - 40px); /* Розміщення трьох блоків в ряд з відступами */
+    min-width: 250px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.pricing-item h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #b4ecff;
+}
+
+.pricing-item ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.pricing-item ul li {
+    margin-bottom: 10px;
+}
+
+.pricing-item p {
+    margin: 10px 0;
+}
+footer {
+    background-color: #2f4134c5;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    color: #ffffff;
+    box-sizing: border-box;
+}
